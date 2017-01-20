@@ -2,14 +2,19 @@
  * Created by david on 1/4/17.
  */
 
-import java.util.*;
+import java.util.Collections;
+import java.util.Collection;
+import java.util.Map;
+import java.util.List;
+import java.util.HashMap;
+import java.util.ArrayList;
 
 public class Terbilang {
     private static Map<Long, String> satuan;
     private static Map<Long, String> ket;
 
     static {
-        satuan = new HashMap<Long, String>();
+        satuan = new HashMap<>();
 
         satuan.put(0L, "nol");
         satuan.put(1L, "satu");
@@ -24,7 +29,7 @@ public class Terbilang {
     }
 
     static {
-        ket = new HashMap<Long, String>();
+        ket = new HashMap<>();
 
         ket.put(10L, "puluh");
         ket.put(100L, "ratus");
@@ -73,7 +78,7 @@ public class Terbilang {
     }
 
     public static <T extends Comparable<? super T>> List<T> asSortedList(Collection<T> c) {
-        List<T> list = new ArrayList<T>(c);
+        List<T> list = new ArrayList<>(c);
         java.util.Collections.sort(list);
         return list;
     }
